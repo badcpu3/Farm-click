@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+}
+
+.font-game {
+  font-family: 'Gaegu', cursive, 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom bounce squish for clicker animation */
+@keyframes animal-squish {
+  0% { transform: scale(1, 1); }
+  25% { transform: scale(1.15, 0.85); }
+  50% { transform: scale(0.9, 1.1); }
+  75% { transform: scale(1.05, 0.95); }
+  100% { transform: scale(1, 1); }
+}
+
+.animate-animal-squish {
+  animation: animal-squish 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Float up and fade */
+@keyframes float-up-fade {
+  0% {
+    opacity: 1;
+    transform: translateY(0px) scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-28px) scale(1.15);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-55px) scale(1);
+  }
+}
+
+.animate-float-up {
+  animation: float-up-fade 0.85s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Custom scrollbar for clean dashboard feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}

@@ -1,0 +1,6 @@
+{
+  "name": "포근한 농장 타이쿤 (Cozy Farm Clicker)",
+  "description": "귀여운 동물들을 클릭하고 달걀, 우유, 트러플을 수확하여 나만의 목장을 번영시키는 방치형 힐링 클리커 게임",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
